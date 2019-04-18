@@ -5,5 +5,8 @@
   "repository": "git@github.com:gbateman/lol-ranks.git",
   "author": "Greg Bateman <gerbot150@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "firebase-admin": "^7.3.0"
+  }
 }
