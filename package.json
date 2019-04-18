@@ -1,0 +1,9 @@
+{
+  "name": "lol-ranks",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gbateman/lol-ranks.git",
+  "author": "Greg Bateman <gerbot150@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
