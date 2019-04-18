@@ -21,13 +21,14 @@ fs.readFile('./summoners.json', (err, data) => {
 
     summonerIDs.forEach(id => {
         const url = summonerURL + id;
+        console.log('request url:', url);
+
         const options = {
             url: url,
             headers: {
                 'X-Riot-Token': riotAPIToken
             }
         };
-        console.log('request options:', options);
 
         request(options, (err, res, body) => {
             if (err) { throw err; }
