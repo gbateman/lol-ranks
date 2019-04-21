@@ -1,7 +1,7 @@
 # lol-ranks
 
-cert:
+cert:  
 `/etc/lol-ranks/lol-ranks.json`
 
-env vars:
+env vars:  
 `RIOT_API_TOKEN`: api token used to query the riot api
