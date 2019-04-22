@@ -1,0 +1,2 @@
+*/10 * * * * root RIOT_API_TOKEN=$(cat /.riot_api_token) /usr/local/bin/node /index.js >> /var/log/cron.log 2>&1
+
