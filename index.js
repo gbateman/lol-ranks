@@ -8,7 +8,14 @@ const soloQueue = 'RANKED_SOLO_5x5';
 const summonerURL = 'https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/';
 
 const summonerIDs = [
-    'tEladA5OIZvYCHo152YVCMq4bzlo48ligyq3BlHCviHPUm8'
+    'k6d1cS-uU0sNaFCb71LTH2BYP4ZgJqkme0JGDdQL7JM4Juw', // mtfuji
+    '-2vCMh1EbLSnHvSPk0O5EUaIZC-KbSbZy9dhmgL6D2k2l9s', // somsom
+    'xM5qQt0tPybc-rmrNC9M6evhlvf55-4WdkqTNJh0qQ', // 7dk
+    'VYO5FNU7FiD_C8uWToeJEBgw_-pgZy5qc4-jTBHROSGqbsM', // das negros
+    'btBahOavIzKqx_iyHemOsnmRCnZDnGbpEWtLAgWbRFdeYkw', // shyvayne
+    'qb4FN1B6yvCTmMPzs-ACbeVOd4DTWMqg8maH3kTzGRr8XKg', // swagmaster7
+    'nOW2tRZJP8dlt9Yw7gli7FHxSBpC1-0d716mDmCY1__8sZg', // simmerdownson
+    'UlHEn5RoJfx7Gc-TVBc-uQCpfMw7vruP5UeJ0T6PSdlrvHU' // icomesoft
 ];
 
 admin.initializeApp({
@@ -37,9 +44,11 @@ summonerIDs.forEach(id => {
         console.log('body:', b);
 
         const rank = b.find(rank => rank.queueType == soloQueue);
-        rank.timestamp = Math.floor(new Date() / 1000);
-        console.log('rank:', rank);
+        if (rank) {
+            rank.timestamp = Math.floor(new Date() / 1000);
+            console.log('rank:', rank);
 
-        ranks.add(rank);
+            ranks.add(rank);
+        }
     });
 });
